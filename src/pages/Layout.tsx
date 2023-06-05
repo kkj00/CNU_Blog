@@ -1,5 +1,6 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import styled from '@emotion/styled';
+import NavLink from 'NavLink';
 
 const Nav = styled.div`
   display: flex;
@@ -13,9 +14,11 @@ const Nav = styled.div`
   font-weight: 600;
   margin: auto;
   padding-top: 20px;
+
   a {
     color: #777;
   }
+
   .active {
     color: rgb(50, 148, 248);
   }
@@ -60,14 +63,20 @@ const Layout = () => {
       <Profile>
         {/*todo (1) 프로필 꾸미기*/}
         <div>
-          <ProfilePicture src="" alt="프로필 사진" />
+          <ProfilePicture
+            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAyMjdfMzkg%2FMDAxNjc3NDk4NjcwODcx.IN5wkFaBck7ENDbRDegYCfpuIfSqgBnvNr-DBE0JFAAg.cRyKMIMFR3rl-Ny9tsc_74KiYGrkhKqdVk7RkyjMb8Yg.PNG.hurijia_2000%2FIMG_0900.JPG&type=a340"
+            alt="프로필 사진"
+          />
         </div>
         <div>
-          <Name>이름</Name>
+          <Name>201902657</Name>
           <Description>설명</Description>
         </div>
       </Profile>
-      <Nav>{/*todo (2) 메뉴 작성*/}</Nav>
+      <Nav>
+        <NavLink to="/">포스트</NavLink>
+        <NavLink to="/resume">소개</NavLink>
+      </Nav>
       <Outlet />
     </div>
   );

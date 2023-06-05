@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { IPost } from '../api/types';
-import Tag from './Tag';
 import styled from '@emotion/styled';
+import Tag from "./Tag.tsx";
 
 const ItemLink = styled(Link)`
   display: flex;
@@ -23,7 +23,16 @@ const Contents = styled.p`
 `;
 
 const PostListItem = (props: IPost) => {
-  return <div>{/*todo (3-2) 게시글 목록 아이템 작성*/}</div>;
+  console.info()props);
+return <div>
+    <ItemLink to={`/post/${id}`}>
+        <h2>react</h2>
+        <Contents>
+            {Contents}
+        </Contents>
+        <Tag>#{tag}</Tag>
+    </ItemLink>
+</div>;
 };
 
 export default PostListItem;
