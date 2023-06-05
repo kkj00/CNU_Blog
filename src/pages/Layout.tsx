@@ -1,6 +1,5 @@
-import { Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import styled from '@emotion/styled';
-import NavLink from 'NavLink';
 
 const Nav = styled.div`
   display: flex;
@@ -14,11 +13,9 @@ const Nav = styled.div`
   font-weight: 600;
   margin: auto;
   padding-top: 20px;
-
   a {
     color: #777;
   }
-
   .active {
     color: rgb(50, 148, 248);
   }
@@ -61,16 +58,12 @@ const Layout = () => {
   return (
     <div>
       <Profile>
-        {/*todo (1) 프로필 꾸미기*/}
         <div>
-          <ProfilePicture
-            src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAyMjdfMzkg%2FMDAxNjc3NDk4NjcwODcx.IN5wkFaBck7ENDbRDegYCfpuIfSqgBnvNr-DBE0JFAAg.cRyKMIMFR3rl-Ny9tsc_74KiYGrkhKqdVk7RkyjMb8Yg.PNG.hurijia_2000%2FIMG_0900.JPG&type=a340"
-            alt="프로필 사진"
-          />
+          <ProfilePicture src="https://t1.daumcdn.net/cfile/tistory/99107A335C1EED5005" alt="프로필 사진" />
         </div>
         <div>
-          <Name>201902657</Name>
-          <Description>설명</Description>
+          <Name>제시</Name>
+          <Description>브롤스타즈~</Description>
         </div>
       </Profile>
       <Nav>

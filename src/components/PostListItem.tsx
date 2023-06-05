@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { IPost } from '../api/types';
+import Tag from './Tag';
 import styled from '@emotion/styled';
-import Tag from "./Tag.tsx";
 
 const ItemLink = styled(Link)`
   display: flex;
@@ -23,16 +23,15 @@ const Contents = styled.p`
 `;
 
 const PostListItem = (props: IPost) => {
-  console.info()props);
-return <div>
+  const { id, title, contents, tag } = props;
+
+  return (
     <ItemLink to={`/post/${id}`}>
-        <h2>react</h2>
-        <Contents>
-            {Contents}
-        </Contents>
-        <Tag>#{tag}</Tag>
+      <h2>{title}</h2>
+      <Contents>{contents}</Contents>
+      <Tag>#{tag}</Tag>
     </ItemLink>
-</div>;
+  );
 };
 
 export default PostListItem;

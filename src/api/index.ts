@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { IResponsePostList } from './types.ts';
+import axios, { AxiosResponse } from 'axios';
+import { IPostWithAd, IResponsePostList } from './types';
 
 const instance = axios.create({
   headers: {
@@ -15,11 +15,11 @@ export const getPostList = (): Promise<AxiosResponse<IResponsePostList>> => {
 };
 
 export const createPost = () => {
-  return instance.get(`/post/${id}`);
+  return null;
 };
 
-export const getPostById = () => {
-  return null;
+export const getPostById = (id: number) => {
+  return instance.get(`/post/${id}`);
 };
 
 export const updatePostById = () => {
